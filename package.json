@@ -1,0 +1,20 @@
+{
+  "name": "@fleetia/kbo_knit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KBO 프로야구 경기 결과를 목도리 배색 패턴으로 만들어주는 웹앱",
+  "scripts": {
+    "dev": "pnpm --filter ./app dev",
+    "build": "pnpm --filter ./app build",
+    "lint": "pnpm --filter ./app lint",
+    "preview": "pnpm --filter ./app preview",
+    "scrape": "node scrape-kbo.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}
