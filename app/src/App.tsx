@@ -95,7 +95,7 @@ export function App() {
       <footer className={s.footer}>
         <a
           className={s.footerLink}
-          href="https://github.com/fleetia/kbo_knit"
+          href="https://github.com/fleetia/kbo-knit"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
