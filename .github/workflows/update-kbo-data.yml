@@ -8,6 +8,10 @@ on:
     - cron: '0 0 * 9,10 1'
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
@@ -44,3 +48,18 @@ jobs:
           git add data/
           git commit -m "data: update KBO $(date +%Y) results (${DATE})"
           git push
+
+      - name: Configure AWS credentials
+        if: steps.changes.outputs.changed == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Sync data to S3
+        if: steps.changes.outputs.changed == 'true'
+        run: aws s3 sync data/ s3://${{ vars.S3_BUCKET }}/data/ --delete
+
+      - name: Invalidate CloudFront cache
+        if: steps.changes.outputs.changed == 'true'
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/data/*"
