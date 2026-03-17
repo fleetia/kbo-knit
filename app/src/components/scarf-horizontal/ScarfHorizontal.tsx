@@ -10,10 +10,11 @@ type Props = {
 type LegendItem = { label: string; color: string };
 
 function buildLegend(colors: ScarfColors, awaySame: boolean): LegendItem[] {
+  const prefix = awaySame ? '' : '홈 ';
   const items: LegendItem[] = [
-    { label: '홈 승', color: colors.home.win },
-    { label: '홈 무', color: colors.home.draw },
-    { label: '홈 패', color: colors.home.loss },
+    { label: `${prefix}승`, color: colors.home.win },
+    { label: `${prefix}무`, color: colors.home.draw },
+    { label: `${prefix}패`, color: colors.home.loss },
   ];
 
   if (!awaySame) {
