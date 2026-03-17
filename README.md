@@ -1,5 +1,7 @@
 # KBO Knit
 
+사이트 >> [https://kbo-knit.star-light.space/](https://kbo-knit.star-light.space/)
+
 뜨개질을 좋아하고 야구를 좋아하는 사람으로서, 시즌을 기록하는 방법이 기록 말고 또 있으면 좋겠다고 생각했어요.\
 그러던 중 트위터에서 [뜨개일기님](https://x.com/hook_h_)의 [트윗](https://x.com/hook_h_/status/2022222157271662923) 을 보고 이 프로젝트를 기획했습니다.
 
