@@ -1,17 +1,26 @@
 import type { Game, GameResult, ScarfColors, ScarfRow, SeriesType, TeamCode } from '../types/game.types';
 import { TEAM_NAMES } from '../constants/teams';
 
+export function getLastScrapedDate(games: Game[]): string | undefined {
+  if (games.length === 0) return undefined;
+  return games.reduce((max, g) => (g.date > max ? g.date : max), games[0].date);
+}
+
 export function getTeamGames(
   games: Game[],
   teamCode: TeamCode,
   seriesFilter: SeriesType[],
 ): Game[] {
+  // 크론잡이 오전에 돌기 때문에 마지막 날짜 경기는 아직 시작 전 (0:0)
+  const lastDate = getLastScrapedDate(games);
+
   return games
     .filter(
       (g) =>
         (g.homeTeam === teamCode || g.awayTeam === teamCode) &&
         seriesFilter.includes(g.seriesType) &&
-        g.awayScore !== null && g.homeScore !== null,
+        g.awayScore !== null && g.homeScore !== null &&
+        g.date !== lastDate,
     )
     .sort((a, b) => a.date.localeCompare(b.date));
 }
