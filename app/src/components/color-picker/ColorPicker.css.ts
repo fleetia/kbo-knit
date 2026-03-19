@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css';
 
 export const group = style({
+  position: 'relative',
   background: '#fff',
   border: '1px solid #e5e5e5',
   borderRadius: 12,
@@ -15,7 +16,42 @@ export const label = style({
   color: '#999',
   textTransform: 'uppercase',
   letterSpacing: '0.05em',
-  marginBottom: '0.5rem',
+  marginBottom: '0.4rem',
+});
+
+export const sectionLabel = style({
+  fontSize: '0.75rem',
+  color: '#999',
+  paddingBottom: 4,
+  borderBottom: '1px solid #e5e5e5',
+  marginBottom: 4,
+});
+
+export const checkboxRow = style({
+  position: 'absolute',
+  top: '1rem',
+  right: '1rem',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.35rem',
+  cursor: 'pointer',
+  '@media': {
+    '(min-width: 768px)': { top: '1.2rem', right: '1.5rem' },
+  },
+});
+
+export const checkbox = style({
+  width: 14,
+  height: 14,
+  cursor: 'pointer',
+  accentColor: '#4a90d9',
+  margin: 0,
+});
+
+export const checkboxLabel = style({
+  fontSize: '0.75rem',
+  color: '#999',
+  letterSpacing: '0.03em',
 });
 
 export const colorRow = style({
@@ -49,10 +85,11 @@ export const hex = style({
   fontFamily: 'monospace',
 });
 
-export const section = style({});
+export const splitRow = style({
+  display: 'flex',
+  gap: '1.5rem',
+});
 
-export const divider = style({
-  height: 1,
-  background: '#e5e5e5',
-  margin: '0.6rem 0',
+export const section = style({
+  flex: 1,
 });

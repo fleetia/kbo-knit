@@ -15,7 +15,6 @@ export function KnittingGuide({ rows, checked, onToggleCheck }: Props) {
   return (
     <div className={s.container}>
       <div className={s.header}>
-        <h2 className={s.title}>뜨개 가이드</h2>
         <span className={s.progress}>
           {doneCount} / {total}단 완료 ({pct}%)
         </span>
@@ -23,7 +22,7 @@ export function KnittingGuide({ rows, checked, onToggleCheck }: Props) {
 
       <div className={s.list}>
         {rows.map((r, i) => {
-          const isChecked = !!checked[r.gameKey];
+          const isChecked = checked[r.gameKey];
           const loc = r.prefix === 'H' ? '홈' : '원정';
 
           return (

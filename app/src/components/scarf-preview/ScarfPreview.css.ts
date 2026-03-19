@@ -35,6 +35,7 @@ export const scarf = style({
 export const row = style({
   display: 'flex',
   height: 10,
+  cursor: 'pointer',
   transition: 'height 0.15s, opacity 0.15s',
   selectors: {
     '&:hover': { height: 24 },
@@ -57,22 +58,19 @@ export const done = style({
   opacity: 0.35,
 });
 
+export const expanded = style({
+  height: 24,
+  '@media': {
+    '(min-width: 768px)': { height: 28 },
+  },
+});
+
 export const checkCell = style({
-  width: 28,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexShrink: 0,
-  cursor: 'pointer',
-  background: '#faf9f6',
+  display: 'none',
 });
 
 export const checkbox = style({
-  width: 12,
-  height: 12,
-  cursor: 'pointer',
-  accentColor: '#4a90d9',
-  margin: 0,
+  display: 'none',
 });
 
 export const bar = style({
@@ -95,6 +93,10 @@ export const tooltip = style({
 });
 
 globalStyle(`${row}:hover ${tooltip}`, {
+  display: 'block',
+});
+
+globalStyle(`${expanded} ${tooltip}`, {
   display: 'block',
 });
 
@@ -124,4 +126,8 @@ export const swatch = style({
   '@media': {
     '(min-width: 768px)': { width: 16, height: 16 },
   },
+});
+
+globalStyle(`${done} ${tooltip}`, {
+  textDecoration: 'line-through',
 });

@@ -1,4 +1,4 @@
-import { style, globalStyle } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 
 export const app = style({
   maxWidth: '100%',
@@ -35,59 +35,6 @@ export const settings = style({
   '@media': {
     '(min-width: 768px)': { flexDirection: 'row', flexWrap: 'wrap', gap: '1rem' },
   },
-});
-
-export const toggleGroup = style({
-  background: '#fff',
-  border: '1px solid #e5e5e5',
-  borderRadius: 12,
-  padding: '0.8rem 1rem',
-});
-
-export const toggleRow = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '0.5rem',
-  cursor: 'pointer',
-});
-
-export const toggleInput = style({
-  opacity: 0,
-  width: 0,
-  height: 0,
-});
-
-export const toggle = style({
-  position: 'relative',
-  display: 'inline-block',
-  width: 40,
-  height: 22,
-  flexShrink: 0,
-});
-
-export const slider = style({
-  position: 'absolute',
-  inset: 0,
-  background: '#ccc',
-  borderRadius: 22,
-  cursor: 'pointer',
-  transition: '0.2s',
-  '::before': {
-    content: '""',
-    position: 'absolute',
-    width: 16,
-    height: 16,
-    left: 3,
-    bottom: 3,
-    background: '#fff',
-    borderRadius: '50%',
-    transition: '0.2s',
-  },
-});
-
-export const toggleLabel = style({
-  fontSize: '0.85rem',
-  color: '#666',
 });
 
 export const loading = style({
@@ -178,10 +125,3 @@ export const footerCredits = style({
   lineHeight: 1.6,
 });
 
-globalStyle(`${toggleInput}:checked + ${slider}`, {
-  background: '#4a90d9',
-});
-
-globalStyle(`${toggleInput}:checked + ${slider}::before`, {
-  transform: 'translateX(18px)',
-});

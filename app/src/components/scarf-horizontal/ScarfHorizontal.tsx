@@ -33,10 +33,6 @@ export function ScarfHorizontal({ rows, colors, awaySame }: Props) {
 
   return (
     <div className={s.container}>
-      <div className={s.header}>
-        <h2 className={s.title}>가로 미리보기</h2>
-      </div>
-
       <div className={s.scarf}>
         {rows.map((r) => (
           <div key={r.gameKey} className={s.col} style={{ background: r.color }} />

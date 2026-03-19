@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react';
 import type { ScarfRow, ScarfColors } from '../../types/game.types';
 import { RESULT_LABELS } from '../../constants/teams';
 import * as s from './ScarfPreview.css';
@@ -39,11 +40,28 @@ function buildLegend(colors: ScarfColors, awaySame: boolean): LegendItem[] {
 
 export function ScarfPreview({ rows, colors, awaySame, wins, draws, losses, checked, onToggleCheck }: Props) {
   const legend = buildLegend(colors, awaySame);
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
+
+  const handleRowClick = useCallback(
+    (gameKey: string) => {
+      const isMobile = window.matchMedia('(hover: none)').matches;
+      if (isMobile) {
+        if (expandedKey === gameKey) {
+          onToggleCheck(gameKey);
+          setExpandedKey(null);
+        } else {
+          setExpandedKey(gameKey);
+        }
+      } else {
+        onToggleCheck(gameKey);
+      }
+    },
+    [expandedKey, onToggleCheck],
+  );
 
   return (
     <div className={s.container}>
       <div className={s.header}>
-        <h2 className={s.title}>목도리 패턴</h2>
         <span className={s.stats}>
           {rows.length}경기 | {wins}승 {draws}무 {losses}패
         </span>
@@ -51,20 +69,14 @@ export function ScarfPreview({ rows, colors, awaySame, wins, draws, losses, chec
 
       <div className={s.scarf}>
         {rows.map((r) => {
-          const isDone = !!checked[r.gameKey];
+          const isDone = checked[r.gameKey];
+          const isExpanded = expandedKey === r.gameKey;
           return (
             <div
               key={r.gameKey}
-              className={`${s.row} ${isDone ? s.done : ''}`}
+              className={`${s.row} ${isDone ? s.done : ''} ${isExpanded ? s.expanded : ''}`}
+              onClick={() => handleRowClick(r.gameKey)}
             >
-              <label className={s.checkCell}>
-                <input
-                  type="checkbox"
-                  className={s.checkbox}
-                  checked={isDone}
-                  onChange={() => onToggleCheck(r.gameKey)}
-                />
-              </label>
               <div className={s.bar} style={{ background: r.color }}>
                 <span className={s.tooltip}>
                   {r.date} {r.prefix} vs {r.opponent} {r.score} {RESULT_LABELS[r.result]}

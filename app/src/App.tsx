@@ -41,24 +41,10 @@ export function App() {
         <TeamSelector value={state.team} onChange={actions.setTeam} />
         <SeriesFilter active={state.series} onToggle={actions.toggleSeries} />
 
-        <div className={s.toggleGroup}>
-          <label className={s.toggleRow}>
-            <span className={s.toggle}>
-              <input
-                type="checkbox"
-                className={s.toggleInput}
-                checked={!state.awaySame}
-                onChange={(e) => actions.setAwaySame(!e.target.checked)}
-              />
-              <span className={s.slider} />
-            </span>
-            <span className={s.toggleLabel}>홈/원정 색상 분리</span>
-          </label>
-        </div>
-
         <ColorPicker
           colors={state.colors}
           awaySame={state.awaySame}
+          onAwaySameChange={actions.setAwaySame}
           onColorChange={actions.setColor}
         />
       </div>
