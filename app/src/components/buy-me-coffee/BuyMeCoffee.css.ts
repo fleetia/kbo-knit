@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from '../../styles/theme.css';
 
 export const wrapper = style({
   display: 'flex',
@@ -15,9 +16,9 @@ export const button = style({
   padding: '0.5rem 1.25rem',
   background: '#ffdd00',
   color: '#000',
-  fontSize: '0.9rem',
+  fontSize: vars.fontSize.xl,
   fontWeight: 600,
-  borderRadius: 8,
+  borderRadius: vars.radius.md,
   textDecoration: 'none',
   transition: 'opacity 0.2s',
   selectors: {

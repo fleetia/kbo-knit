@@ -1,22 +1,7 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from '../../styles/theme.css';
 
-export const group = style({
-  background: '#fff',
-  border: '1px solid #e5e5e5',
-  borderRadius: 12,
-  padding: '1rem',
-  '@media': {
-    '(min-width: 768px)': { padding: '1.2rem 1.5rem' },
-  },
-});
-
-export const label = style({
-  fontSize: '0.8rem',
-  color: '#999',
-  textTransform: 'uppercase',
-  letterSpacing: '0.05em',
-  marginBottom: '0.5rem',
-});
+export { group, groupLabel as label } from '../../styles/shared.css';
 
 export const filters = style({
   display: 'flex',
@@ -26,10 +11,10 @@ export const filters = style({
 export const btn = style({
   flex: 1,
   padding: '0.5rem 0.6rem',
-  border: '1px solid #ddd',
+  border: `1px solid ${vars.color.borderLight}`,
   borderRadius: 20,
-  background: '#fff',
-  fontSize: '0.8rem',
+  background: vars.color.white,
+  fontSize: vars.fontSize.md,
   cursor: 'pointer',
   transition: '0.15s',
   textAlign: 'center',
@@ -39,7 +24,7 @@ export const btn = style({
 });
 
 export const active = style({
-  background: '#333',
-  color: '#fff',
-  borderColor: '#333',
+  background: vars.color.activeBg,
+  color: vars.color.white,
+  borderColor: vars.color.activeBg,
 });

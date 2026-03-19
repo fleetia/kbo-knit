@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react';
 import type { ScarfRow, ScarfColors } from '../../types/game.types';
 import { RESULT_LABELS } from '../../constants/teams';
+import { buildLegend } from '../../utils/legendUtils';
+import { Legend } from '../legend/Legend';
 import * as s from './ScarfPreview.css';
 
 type Props = {
@@ -13,30 +15,6 @@ type Props = {
   checked: Record<string, boolean>;
   onToggleCheck: (gameKey: string) => void;
 };
-
-type LegendItem = {
-  label: string;
-  color: string;
-};
-
-function buildLegend(colors: ScarfColors, awaySame: boolean): LegendItem[] {
-  const prefix = awaySame ? '' : '홈 ';
-  const items: LegendItem[] = [
-    { label: `${prefix}승`, color: colors.home.win },
-    { label: `${prefix}무`, color: colors.home.draw },
-    { label: `${prefix}패`, color: colors.home.loss },
-  ];
-
-  if (!awaySame) {
-    items.push(
-      { label: '원정 승', color: colors.away.win },
-      { label: '원정 무', color: colors.away.draw },
-      { label: '원정 패', color: colors.away.loss },
-    );
-  }
-
-  return items;
-}
 
 export function ScarfPreview({ rows, colors, awaySame, wins, draws, losses, checked, onToggleCheck }: Props) {
   const legend = buildLegend(colors, awaySame);
@@ -87,14 +65,7 @@ export function ScarfPreview({ rows, colors, awaySame, wins, draws, losses, chec
         })}
       </div>
 
-      <div className={s.legend}>
-        {legend.map((item) => (
-          <div key={item.label} className={s.legendItem}>
-            <div className={s.swatch} style={{ background: item.color }} />
-            {item.label}
-          </div>
-        ))}
-      </div>
+      <Legend items={legend} />
     </div>
   );
 }

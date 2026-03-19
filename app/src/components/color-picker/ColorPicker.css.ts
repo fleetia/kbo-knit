@@ -1,29 +1,22 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from '../../styles/theme.css';
+import { group as baseGroup } from '../../styles/shared.css';
 
-export const group = style({
-  position: 'relative',
-  background: '#fff',
-  border: '1px solid #e5e5e5',
-  borderRadius: 12,
-  padding: '1rem',
-  '@media': {
-    '(min-width: 768px)': { padding: '1.2rem 1.5rem' },
-  },
-});
+export const group = style([baseGroup, { position: 'relative' }]);
 
 export const label = style({
-  fontSize: '0.8rem',
-  color: '#999',
+  fontSize: vars.fontSize.md,
+  color: vars.color.textPlaceholder,
   textTransform: 'uppercase',
   letterSpacing: '0.05em',
   marginBottom: '0.4rem',
 });
 
 export const sectionLabel = style({
-  fontSize: '0.75rem',
-  color: '#999',
+  fontSize: vars.fontSize.base,
+  color: vars.color.textPlaceholder,
   paddingBottom: 4,
-  borderBottom: '1px solid #e5e5e5',
+  borderBottom: `1px solid ${vars.color.border}`,
   marginBottom: 4,
 });
 
@@ -44,13 +37,13 @@ export const checkbox = style({
   width: 14,
   height: 14,
   cursor: 'pointer',
-  accentColor: '#4a90d9',
+  accentColor: vars.color.accent,
   margin: 0,
 });
 
 export const checkboxLabel = style({
-  fontSize: '0.75rem',
-  color: '#999',
+  fontSize: vars.fontSize.base,
+  color: vars.color.textPlaceholder,
   letterSpacing: '0.03em',
 });
 
@@ -63,15 +56,15 @@ export const colorRow = style({
 
 export const colorLabel = style({
   width: 20,
-  fontSize: '0.85rem',
+  fontSize: vars.fontSize.lg,
   fontWeight: 600,
 });
 
 export const colorInput = style({
   width: 32,
   height: 32,
-  border: '2px solid #e5e5e5',
-  borderRadius: 8,
+  border: `2px solid ${vars.color.border}`,
+  borderRadius: vars.radius.md,
   cursor: 'pointer',
   padding: 2,
   '@media': {
@@ -80,8 +73,8 @@ export const colorInput = style({
 });
 
 export const hex = style({
-  fontSize: '0.7rem',
-  color: '#aaa',
+  fontSize: vars.fontSize.sm,
+  color: vars.color.textSubtle,
   fontFamily: 'monospace',
 });
 

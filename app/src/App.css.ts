@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from './styles/theme.css';
 
 export const app = style({
   maxWidth: '100%',
@@ -10,20 +11,20 @@ export const app = style({
 });
 
 export const title = style({
-  fontSize: '1.3rem',
+  fontSize: vars.fontSize['4xl'],
   marginBottom: '0.2rem',
   letterSpacing: 'normal',
   '@media': {
-    '(min-width: 768px)': { fontSize: '1.6rem' },
+    '(min-width: 768px)': { fontSize: vars.fontSize['5xl'] },
   },
 });
 
 export const subtitle = style({
-  color: '#888',
-  fontSize: '0.8rem',
+  color: vars.color.textMuted,
+  fontSize: vars.fontSize.md,
   marginBottom: '1.2rem',
   '@media': {
-    '(min-width: 768px)': { fontSize: '0.9rem', marginBottom: '2rem' },
+    '(min-width: 768px)': { fontSize: vars.fontSize.xl, marginBottom: '2rem' },
   },
 });
 
@@ -39,16 +40,16 @@ export const settings = style({
 
 export const loading = style({
   textAlign: 'center',
-  color: '#888',
+  color: vars.color.textMuted,
   padding: '2rem 0',
-  fontSize: '0.9rem',
+  fontSize: vars.fontSize.xl,
 });
 
 export const error = style({
   textAlign: 'center',
-  color: '#c0392b',
+  color: vars.color.error,
   padding: '2rem 0',
-  fontSize: '0.9rem',
+  fontSize: vars.fontSize.xl,
 });
 
 export const tabs = style({
@@ -59,34 +60,34 @@ export const tabs = style({
 
 export const tab = style({
   padding: '0.5rem 1rem',
-  fontSize: '0.85rem',
+  fontSize: vars.fontSize.lg,
   fontFamily: 'inherit',
   lineHeight: 1.4,
   fontWeight: 600,
-  color: '#999',
-  background: '#f5f5f5',
-  border: '1px solid #e5e5e5',
+  color: vars.color.textPlaceholder,
+  background: vars.color.inactiveBg,
+  border: `1px solid ${vars.color.border}`,
   borderBottom: 'none',
-  borderRadius: '8px 8px 0 0',
+  borderRadius: `${vars.radius.md} ${vars.radius.md} 0 0`,
   cursor: 'pointer',
   transition: 'color 0.2s, background 0.2s',
   marginBottom: -1,
   position: 'relative',
   ':hover': {
-    color: '#666',
+    color: vars.color.textLight,
   },
 });
 
 export const tabActive = style({
-  color: '#1a1a1a',
-  background: '#fff',
+  color: vars.color.textDark,
+  background: vars.color.white,
   zIndex: 1,
 });
 
 export const tabContent = style({
-  background: '#fff',
-  border: '1px solid #e5e5e5',
-  borderRadius: 12,
+  background: vars.color.white,
+  border: `1px solid ${vars.color.border}`,
+  borderRadius: vars.radius.lg,
   borderTopLeftRadius: 0,
   padding: '1rem',
   marginBottom: '1rem',
@@ -97,18 +98,18 @@ export const tabContent = style({
 
 export const empty = style({
   textAlign: 'center',
-  color: '#999',
+  color: vars.color.textPlaceholder,
   padding: '3rem 0',
-  fontSize: '0.9rem',
+  fontSize: vars.fontSize.xl,
 });
 
 export const footer = style({
   marginTop: '3rem',
   padding: '1.5rem 0',
-  borderTop: '1px solid #e5e5e5',
+  borderTop: `1px solid ${vars.color.border}`,
   textAlign: 'center',
-  fontSize: '0.8rem',
-  color: '#999',
+  fontSize: vars.fontSize.md,
+  color: vars.color.textPlaceholder,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -116,12 +117,11 @@ export const footer = style({
 });
 
 export const footerLink = style({
-  color: '#999',
+  color: vars.color.textPlaceholder,
   textDecoration: 'none',
-  ':hover': { color: '#666' },
+  ':hover': { color: vars.color.textLight },
 });
 
 export const footerCredits = style({
   lineHeight: 1.6,
 });
-

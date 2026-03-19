@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { vars } from '../../styles/theme.css';
 
 export const container = style({});
 
@@ -9,28 +10,21 @@ export const header = style({
   marginBottom: '0.6rem',
 });
 
-export const title = style({
-  fontSize: '0.95rem',
-  '@media': {
-    '(min-width: 768px)': { fontSize: '1.1rem' },
-  },
-});
-
 export const progress = style({
-  fontSize: '0.75rem',
-  color: '#888',
+  fontSize: vars.fontSize.base,
+  color: vars.color.textMuted,
 });
 
 export const list = style({
-  fontSize: '0.75rem',
+  fontSize: vars.fontSize.base,
   lineHeight: 1.6,
-  color: '#555',
+  color: vars.color.textLight,
   fontFamily: 'monospace',
   maxHeight: '60vh',
   overflowY: 'auto',
   WebkitOverflowScrolling: 'touch',
   '@media': {
-    '(min-width: 768px)': { fontSize: '0.8rem', maxHeight: 500 },
+    '(min-width: 768px)': { fontSize: vars.fontSize.md, maxHeight: 500 },
   },
 });
 
@@ -39,12 +33,12 @@ export const row = style({
   alignItems: 'center',
   gap: '0.4rem',
   padding: '0.3rem',
-  borderRadius: 4,
+  borderRadius: vars.radius.sm,
   transition: 'background 0.1s',
   cursor: 'pointer',
   minHeight: 32,
   selectors: {
-    '&:active': { background: '#f0f0f0' },
+    '&:active': { background: vars.color.hoverBg },
   },
   '@media': {
     '(min-width: 768px)': {
@@ -63,7 +57,7 @@ export const checkbox = style({
   width: 18,
   height: 18,
   cursor: 'pointer',
-  accentColor: '#4a90d9',
+  accentColor: vars.color.accent,
   flexShrink: 0,
   '@media': {
     '(min-width: 768px)': { width: 16, height: 16 },
@@ -73,9 +67,9 @@ export const checkbox = style({
 export const rowNum = style({
   width: 24,
   textAlign: 'right',
-  color: '#bbb',
+  color: vars.color.textFaint,
   flexShrink: 0,
-  fontSize: '0.7rem',
+  fontSize: vars.fontSize.sm,
 });
 
 export const swatch = style({
