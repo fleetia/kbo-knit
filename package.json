@@ -14,6 +14,10 @@
   "author": "",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
   "dependencies": {
     "playwright": "^1.58.2"
   }
