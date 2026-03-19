@@ -68,7 +68,11 @@ export function App() {
       {isLoading && <p className={s.loading}>데이터 로딩 중...</p>}
       {error && <p className={s.error}>{error}</p>}
 
-      {!isLoading && !error && (
+      {!isLoading && !error && scarfRows.length === 0 && (
+        <p className={s.empty}>진행된 경기가 없습니다.</p>
+      )}
+
+      {!isLoading && !error && scarfRows.length > 0 && (
         <>
           <ScarfHorizontal
             rows={scarfRows}

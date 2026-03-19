@@ -148,6 +148,13 @@ export const tabContent = style({
   },
 });
 
+export const empty = style({
+  textAlign: 'center',
+  color: '#999',
+  padding: '3rem 0',
+  fontSize: '0.9rem',
+});
+
 export const footer = style({
   marginTop: '3rem',
   padding: '1.5rem 0',

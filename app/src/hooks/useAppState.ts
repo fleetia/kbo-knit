@@ -44,6 +44,7 @@ export function useAppState(): [AppState, AppActions] {
     (series: SeriesType) =>
       setState((prev) => {
         const has = prev.series.includes(series);
+        if (has && prev.series.length <= 1) return prev;
         return {
           ...prev,
           series: has ? prev.series.filter((s) => s !== series) : [...prev.series, series],
