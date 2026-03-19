@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useAppState } from './hooks/useAppState';
 import { useKboData } from './hooks/useKboData';
 import { getTeamGames, buildScarfRows, countResults } from './utils/gameUtils';
@@ -12,8 +12,11 @@ import { BuyMeCoffee } from './components/buy-me-coffee/BuyMeCoffee';
 import { KnittingGuide } from './components/knitting-guide/KnittingGuide';
 import * as s from './App.css';
 
+type Tab = 'pattern' | 'guide';
+
 export function App() {
   const [state, actions] = useAppState();
+  const [activeTab, setActiveTab] = useState<Tab>('pattern');
   const { games, isLoading, error } = useKboData(state.season);
 
   const filteredGames = useMemo(
@@ -73,22 +76,41 @@ export function App() {
             awaySame={state.awaySame}
           />
 
-          <ScarfPreview
-            rows={scarfRows}
-            colors={actions.scarfColors}
-            awaySame={state.awaySame}
-            wins={wins}
-            draws={draws}
-            losses={losses}
-            checked={state.checked}
-            onToggleCheck={actions.toggleChecked}
-          />
+          <div className={s.tabs}>
+            <button
+              className={`${s.tab} ${activeTab === 'pattern' ? s.tabActive : ''}`}
+              onClick={() => setActiveTab('pattern')}
+            >
+              목도리 패턴
+            </button>
+            <button
+              className={`${s.tab} ${activeTab === 'guide' ? s.tabActive : ''}`}
+              onClick={() => setActiveTab('guide')}
+            >
+              뜨개 가이드
+            </button>
+          </div>
 
-          <KnittingGuide
-            rows={scarfRows}
-            checked={state.checked}
-            onToggleCheck={actions.toggleChecked}
-          />
+          <div className={s.tabContent}>
+            {activeTab === 'pattern' ? (
+              <ScarfPreview
+                rows={scarfRows}
+                colors={actions.scarfColors}
+                awaySame={state.awaySame}
+                wins={wins}
+                draws={draws}
+                losses={losses}
+                checked={state.checked}
+                onToggleCheck={actions.toggleChecked}
+              />
+            ) : (
+              <KnittingGuide
+                rows={scarfRows}
+                checked={state.checked}
+                onToggleCheck={actions.toggleChecked}
+              />
+            )}
+          </div>
         </>
       )}
 

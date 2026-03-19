@@ -104,6 +104,50 @@ export const error = style({
   fontSize: '0.9rem',
 });
 
+export const tabs = style({
+  display: 'flex',
+  gap: 0,
+  marginBottom: 0,
+});
+
+export const tab = style({
+  padding: '0.5rem 1rem',
+  fontSize: '0.85rem',
+  fontFamily: 'inherit',
+  lineHeight: 1.4,
+  fontWeight: 600,
+  color: '#999',
+  background: '#f5f5f5',
+  border: '1px solid #e5e5e5',
+  borderBottom: 'none',
+  borderRadius: '8px 8px 0 0',
+  cursor: 'pointer',
+  transition: 'color 0.2s, background 0.2s',
+  marginBottom: -1,
+  position: 'relative',
+  ':hover': {
+    color: '#666',
+  },
+});
+
+export const tabActive = style({
+  color: '#1a1a1a',
+  background: '#fff',
+  zIndex: 1,
+});
+
+export const tabContent = style({
+  background: '#fff',
+  border: '1px solid #e5e5e5',
+  borderRadius: 12,
+  borderTopLeftRadius: 0,
+  padding: '1rem',
+  marginBottom: '1rem',
+  '@media': {
+    '(min-width: 768px)': { padding: '1.5rem', marginBottom: '2rem' },
+  },
+});
+
 export const footer = style({
   marginTop: '3rem',
   padding: '1.5rem 0',

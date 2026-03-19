@@ -1,14 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const container = style({
-  background: '#fff',
-  border: '1px solid #e5e5e5',
-  borderRadius: 12,
-  padding: '1rem',
-  '@media': {
-    '(min-width: 768px)': { padding: '1.5rem' },
-  },
-});
+export const container = style({});
 
 export const header = style({
   display: 'flex',
