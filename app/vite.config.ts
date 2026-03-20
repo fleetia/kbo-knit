@@ -6,6 +6,20 @@ import { resolve, join } from 'node:path';
 
 const dataDir = resolve(__dirname, '..', 'data');
 
+const injectSwVersion = (): Plugin => ({
+  name: 'inject-sw-version',
+  generateBundle(_, bundle) {
+    const swAsset = bundle['sw.js'];
+    if (swAsset && swAsset.type === 'asset') {
+      const version = `kbo-knit-${Date.now()}`;
+      swAsset.source = (swAsset.source as string).replace(
+        '__BUILD_VERSION__',
+        version,
+      );
+    }
+  },
+});
+
 const serveRootData = (): Plugin => ({
   name: 'serve-root-data',
   configureServer(server) {
@@ -33,5 +47,5 @@ const serveRootData = (): Plugin => ({
 });
 
 export default defineConfig({
-  plugins: [react(), vanillaExtractPlugin(), serveRootData()],
+  plugins: [react(), vanillaExtractPlugin(), serveRootData(), injectSwVersion()],
 });
