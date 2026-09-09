@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { API_BASE_URL } from "../../cloud/store";
+import { API_BASE_URL, LOGIN_URL } from "../../cloud/store";
 import type { CloudSnapshot, CloudStore, SyncStatus } from "../../cloud/types";
 import * as s from "./CloudAccount.css";
 
@@ -23,9 +23,6 @@ const STATUS_TEXT: Record<SyncStatus, string> = {
 type Props = { snapshot: CloudSnapshot; store: CloudStore };
 
 export function CloudAccount({ snapshot, store }: Props): ReactElement {
-  const returnTo =
-    import.meta.env.DEV && API_BASE_URL === "" ? "kbo-knit-local" : "kbo-knit";
-  const loginUrl = `${API_BASE_URL}/auth?returnTo=${returnTo}`;
   return (
     <section className={s.container} aria-label="계정과 클라우드 저장">
       <h2 className={s.heading}>계정과 클라우드 저장</h2>
@@ -48,7 +45,7 @@ export function CloudAccount({ snapshot, store }: Props): ReactElement {
       )}
       <div className={s.actions}>
         {(!snapshot.account || snapshot.status === "expired") && (
-          <a className={s.action} href={loginUrl}>
+          <a className={s.action} href={LOGIN_URL}>
             로그인 / 가입
           </a>
         )}
