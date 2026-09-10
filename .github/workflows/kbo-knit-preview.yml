@@ -15,9 +15,9 @@ permissions:
 
 jobs:
   preview:
-    if: github.event_name == 'pull_request_target' || github.event.issue.pull_request
-    uses: fleetia/fleetia-bot/.github/workflows/preview.yml@780432a28ac7f112a827ccc43567c3f0712dbd45
+    if: github.event_name == 'pull_request_target' || (github.event.issue.pull_request && github.event.comment.user.type != 'Bot')
+    uses: fleetia/fleetia-bot/.github/workflows/preview.yml@39040897ff21a0d3cecb09261f089b9ccd67b7d1
     with:
-      bot-ref: 780432a28ac7f112a827ccc43567c3f0712dbd45
+      bot-ref: 39040897ff21a0d3cecb09261f089b9ccd67b7d1
     secrets:
       FLEETIA_BOT_PRIVATE_KEY: ${{ secrets.FLEETIA_BOT_PRIVATE_KEY }}
