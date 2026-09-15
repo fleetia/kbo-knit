@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <!-- shadow -->
-  <circle cx="64" cy="64" r="60" fill="#e8e8e8"/>
-  <!-- ball -->
-  <circle cx="64" cy="64" r="58" fill="#fff"/>
-  <!-- left seam ) : start x=44, curves right toward center -->
-  <path d="M44 28 C52 44, 52 84, 44 100" stroke="#d63031" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <circle cx="44" cy="28" r="3" fill="#d63031"/>
-  <circle cx="44" cy="100" r="3" fill="#d63031"/>
-  <!-- right seam ( : start x=84, curves left toward center -->
-  <path d="M84 28 C76 44, 76 84, 84 100" stroke="#d63031" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <circle cx="84" cy="28" r="3" fill="#d63031"/>
-  <circle cx="84" cy="100" r="3" fill="#d63031"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges"><path fill="#162B59" fill-rule="evenodd" d="M10 4H18V6H22V8H24V12H26V20H24V24H22V26H18V28H10V26H6V24H4V20H2V12H4V8H6V6H10ZM8 8H10V12H12V20H10V24H8V20H10V12H8ZM18 8H20V12H18V20H20V24H18V20H16V12H18Z"/><rect x="24" y="4" width="4" height="4" fill="#162B59"/><rect x="28" y="2" width="2" height="2" fill="#162B59"/><rect x="28" y="8" width="2" height="2" fill="#162B59"/></svg>

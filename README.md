@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/icon-dark.svg" />
+  <img src=".github/assets/icon.svg" alt="KBO Knit" width="64" height="64" />
+</picture>
+
 # KBO Knit
 
 KBO 경기 결과를 뜨개 패턴으로 시각화하고 진행 상황을 기록하는 웹앱입니다.
