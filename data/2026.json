@@ -7187,8 +7187,8 @@
       "date": "2026-09-24",
       "awayTeam": "LOTTE",
       "homeTeam": "LG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 6,
+      "homeScore": 4
     },
     {
       "gameKey": "20260924-SAMSUNG-SSG-1",
@@ -7196,8 +7196,8 @@
       "date": "2026-09-24",
       "awayTeam": "SAMSUNG",
       "homeTeam": "SSG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 5,
+      "homeScore": 4
     },
     {
       "gameKey": "20260924-NC-KT-1",
@@ -7205,8 +7205,8 @@
       "date": "2026-09-24",
       "awayTeam": "NC",
       "homeTeam": "KT",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 2,
+      "homeScore": 3
     },
     {
       "gameKey": "20260925-LOTTE-DOOSAN-1",
