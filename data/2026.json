@@ -7215,7 +7215,8 @@
       "awayTeam": "LOTTE",
       "homeTeam": "DOOSAN",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260925-SAMSUNG-SSG-1",
@@ -7224,7 +7225,8 @@
       "awayTeam": "SAMSUNG",
       "homeTeam": "SSG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20260925-HANWHA-NC-1",
@@ -7232,8 +7234,8 @@
       "date": "2026-09-25",
       "awayTeam": "HANWHA",
       "homeTeam": "NC",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 7,
+      "homeScore": 8
     },
     {
       "gameKey": "20260926-LG-KIA-1",
