@@ -7685,8 +7685,8 @@
       "date": "2026-10-10",
       "awayTeam": "LG",
       "homeTeam": "LOTTE",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 4,
+      "homeScore": 3
     },
     {
       "gameKey": "20261010-SSG-KIA-1",
@@ -7694,8 +7694,8 @@
       "date": "2026-10-10",
       "awayTeam": "SSG",
       "homeTeam": "KIA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 5,
+      "homeScore": 8
     },
     {
       "gameKey": "20261010-NC-HANWHA-1",
@@ -7703,8 +7703,8 @@
       "date": "2026-10-10",
       "awayTeam": "NC",
       "homeTeam": "HANWHA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 9,
+      "homeScore": 8
     },
     {
       "gameKey": "20261011-KT-SAMSUNG-1",
