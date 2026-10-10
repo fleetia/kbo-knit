@@ -1,3 +1,4 @@
+import { resolveCloudConfig } from "./config";
 import { DEFAULT_STATE } from "../constants/defaults";
 import type { AppState } from "../types/game.types";
 import {
@@ -24,10 +25,8 @@ import {
   isEnvelope
 } from "./validation";
 
-export const API_BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL ??
-  (import.meta.env.DEV ? "" : "https://iserlohn.star-light.space")
-).replace(/\/$/, "");
+export const { apiBaseUrl: API_BASE_URL, loginUrl: LOGIN_URL } =
+  resolveCloudConfig(import.meta.env);
 
 export function createCloudStore(): CloudStore {
   const storedOwner = readStored(OWNER_KEY);

@@ -1,8 +1,9 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { readdirSync, readFileSync, existsSync, writeFileSync } from "node:fs";
 import { resolve, join, relative } from "node:path";
+import { resolveCloudConfig } from "./src/cloud/config";
 import { localAccountProxy } from "./dev/accountProxy";
 
 const dataDir = resolve(__dirname, "data");
@@ -90,12 +91,19 @@ const serveRootData = (): Plugin => ({
   }
 });
 
-export default defineConfig({
-  plugins: [
-    react(),
-    vanillaExtractPlugin(),
-    serveRootData(),
-    injectSwVersion(),
-    localAccountProxy()
-  ]
+export default defineConfig(({ mode, command }) => {
+  resolveCloudConfig({
+    ...loadEnv(mode, process.cwd(), "VITE_"),
+    MODE: mode,
+    DEV: command === "serve"
+  });
+  return {
+    plugins: [
+      react(),
+      vanillaExtractPlugin(),
+      serveRootData(),
+      injectSwVersion(),
+      localAccountProxy()
+    ]
+  };
 });
