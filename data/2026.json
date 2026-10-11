@@ -7712,8 +7712,8 @@
       "date": "2026-10-11",
       "awayTeam": "KT",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 12,
+      "homeScore": 3
     },
     {
       "gameKey": "20261011-LOTTE-KIA-1",
@@ -7721,8 +7721,8 @@
       "date": "2026-10-11",
       "awayTeam": "LOTTE",
       "homeTeam": "KIA",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 4,
+      "homeScore": 1
     },
     {
       "gameKey": "20261012-LOTTE-DOOSAN-1",
