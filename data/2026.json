@@ -7730,8 +7730,8 @@
       "date": "2026-10-12",
       "awayTeam": "LOTTE",
       "homeTeam": "DOOSAN",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 7,
+      "homeScore": 4
     },
     {
       "gameKey": "20261012-KT-SAMSUNG-1",
@@ -7739,8 +7739,8 @@
       "date": "2026-10-12",
       "awayTeam": "KT",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null
+      "awayScore": 4,
+      "homeScore": 2
     },
     {
       "gameKey": "20261012-LG-KIA-1",
@@ -7748,6 +7748,114 @@
       "date": "2026-10-12",
       "awayTeam": "LG",
       "homeTeam": "KIA",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameKey": "20261014-DOOSAN-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-14",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261015-DOOSAN-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-15",
+      "awayTeam": "DOOSAN",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261017-WC\n승리팀-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-17",
+      "awayTeam": "WC\n승리팀",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261018-WC\n승리팀-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-18",
+      "awayTeam": "WC\n승리팀",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261020-KIA-WC\n승리팀-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-20",
+      "awayTeam": "KIA",
+      "homeTeam": "WC\n승리팀",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261021-KIA-WC\n승리팀-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-21",
+      "awayTeam": "KIA",
+      "homeTeam": "WC\n승리팀",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261023-WC\n승리팀-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-23",
+      "awayTeam": "WC\n승리팀",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261025-준PO\n승리팀-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-25",
+      "awayTeam": "준PO\n승리팀",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261026-준PO\n승리팀-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-26",
+      "awayTeam": "준PO\n승리팀",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261028-SAMSUNG-준PO\n승리팀-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-28",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "준PO\n승리팀",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261029-SAMSUNG-준PO\n승리팀-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "준PO\n승리팀",
+      "awayScore": null,
+      "homeScore": null
+    },
+    {
+      "gameKey": "20261031-준PO\n승리팀-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-31",
+      "awayTeam": "준PO\n승리팀",
+      "homeTeam": "SAMSUNG",
       "awayScore": null,
       "homeScore": null
     }
