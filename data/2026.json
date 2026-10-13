@@ -7758,7 +7758,8 @@
       "awayTeam": "DOOSAN",
       "homeTeam": "LG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20261015-DOOSAN-LG-1",
@@ -7767,7 +7768,8 @@
       "awayTeam": "DOOSAN",
       "homeTeam": "LG",
       "awayScore": null,
-      "homeScore": null
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20261017-WC\n승리팀-KIA-1",
