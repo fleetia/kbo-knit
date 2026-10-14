@@ -7757,9 +7757,8 @@
       "date": "2026-10-14",
       "awayTeam": "DOOSAN",
       "homeTeam": "LG",
-      "awayScore": null,
-      "homeScore": null,
-      "status": "cancelled"
+      "awayScore": 1,
+      "homeScore": 4
     },
     {
       "gameKey": "20261015-DOOSAN-LG-1",
@@ -7781,6 +7780,16 @@
       "homeScore": null
     },
     {
+      "gameKey": "20261017-LG-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-17",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
+    },
+    {
       "gameKey": "20261018-WC\n승리팀-KIA-1",
       "seriesType": "POSTSEASON",
       "date": "2026-10-18",
@@ -7788,6 +7797,16 @@
       "homeTeam": "KIA",
       "awayScore": null,
       "homeScore": null
+    },
+    {
+      "gameKey": "20261018-LG-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-18",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20261020-KIA-WC\n승리팀-1",
@@ -7799,6 +7818,16 @@
       "homeScore": null
     },
     {
+      "gameKey": "20261020-KIA-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-20",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
+    },
+    {
       "gameKey": "20261021-KIA-WC\n승리팀-1",
       "seriesType": "POSTSEASON",
       "date": "2026-10-21",
@@ -7808,6 +7837,16 @@
       "homeScore": null
     },
     {
+      "gameKey": "20261021-KIA-LG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-21",
+      "awayTeam": "KIA",
+      "homeTeam": "LG",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
+    },
+    {
       "gameKey": "20261023-WC\n승리팀-KIA-1",
       "seriesType": "POSTSEASON",
       "date": "2026-10-23",
@@ -7815,6 +7854,16 @@
       "homeTeam": "KIA",
       "awayScore": null,
       "homeScore": null
+    },
+    {
+      "gameKey": "20261023-LG-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-23",
+      "awayTeam": "LG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
     },
     {
       "gameKey": "20261025-준PO\n승리팀-SAMSUNG-1",
