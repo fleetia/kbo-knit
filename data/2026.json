@@ -7803,9 +7803,8 @@
       "date": "2026-10-18",
       "awayTeam": "LG",
       "homeTeam": "KIA",
-      "awayScore": null,
-      "homeScore": null,
-      "status": "cancelled"
+      "awayScore": 3,
+      "homeScore": 6
     },
     {
       "gameKey": "20261020-KIA-WC\n승리팀-1",
