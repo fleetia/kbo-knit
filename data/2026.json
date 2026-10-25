@@ -7901,6 +7901,16 @@
       "status": "cancelled"
     },
     {
+      "gameKey": "20261027-KIA-SAMSUNG-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-27",
+      "awayTeam": "KIA",
+      "homeTeam": "SAMSUNG",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
+    },
+    {
       "gameKey": "20261028-SAMSUNG-준PO\n승리팀-1",
       "seriesType": "POSTSEASON",
       "date": "2026-10-28",
@@ -7932,6 +7942,16 @@
       "gameKey": "20261029-SAMSUNG-KIA-1",
       "seriesType": "POSTSEASON",
       "date": "2026-10-29",
+      "awayTeam": "SAMSUNG",
+      "homeTeam": "KIA",
+      "awayScore": null,
+      "homeScore": null,
+      "status": "cancelled"
+    },
+    {
+      "gameKey": "20261030-SAMSUNG-KIA-1",
+      "seriesType": "POSTSEASON",
+      "date": "2026-10-30",
       "awayTeam": "SAMSUNG",
       "homeTeam": "KIA",
       "awayScore": null,
