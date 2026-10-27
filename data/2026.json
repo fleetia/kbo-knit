@@ -7905,9 +7905,8 @@
       "date": "2026-10-27",
       "awayTeam": "KIA",
       "homeTeam": "SAMSUNG",
-      "awayScore": null,
-      "homeScore": null,
-      "status": "cancelled"
+      "awayScore": 3,
+      "homeScore": 8
     },
     {
       "gameKey": "20261028-SAMSUNG-준PO\n승리팀-1",
