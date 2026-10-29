@@ -7942,9 +7942,8 @@
       "date": "2026-10-29",
       "awayTeam": "SAMSUNG",
       "homeTeam": "KIA",
-      "awayScore": null,
-      "homeScore": null,
-      "status": "cancelled"
+      "awayScore": 6,
+      "homeScore": 4
     },
     {
       "gameKey": "20261030-SAMSUNG-KIA-1",
